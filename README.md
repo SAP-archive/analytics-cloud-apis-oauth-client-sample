@@ -2,7 +2,7 @@
 Sample embedding SAP Analytics Cloud (SAC) in to third party websites using the SAC API
 
 ## Description
-This web application exemplifies how SAP Analytics Cloud (SAC) stories can be embedded in third-party websites using SAC API. SAC content is accessed via OAuth 2.0.  A guide for using SAC APIs can be found [here](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/).
+This repository contains the accompanying source code for the [SAP Analytics Cloud APIs: Getting Started Guide](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/). We exemplify how third-party applications can access SAC content by using the authorization protocol [OAuth 2.0](https://oauth.net/2/).
 
 This demo app is programmed in [Node.js](https://nodejs.org/en/download/) and uses the [simple-oauth2 library](https://www.npmjs.com/package/simple-oauth2).
 ### Project Structure
