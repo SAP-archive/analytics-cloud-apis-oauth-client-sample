@@ -59,6 +59,9 @@ In case the story is not visualized in the iframe (i.e., the iframe's background
 ## Support
 Should you have any problems, please create a [new issue](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/issues/new).
 
+## Contributions
+Currently we do not accept any external contributions to this project. 
+
 ## License
 Copyright (c) 2017 SAP SE or an SAP affiliate company. All rights reserved.
 This file is licensed under SAP SAMPLE CODE LICENSE AGREEMENT, v. 1.0 except as noted otherwise in the [LICENSE file](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/LICENSE).
