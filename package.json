@@ -1,0 +1,29 @@
+{
+  "name": "analytics-cloud-apis-oauth-client-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-app.js",
+  "scripts": {
+    "start": "node server-app.js"
+  },
+  "keywords": [],
+  "author": "Patrick Voelker",
+  "dependencies": {
+    "connect-timeout": "^1.9.0",
+    "express": "^4.16.2",
+    "express-favicon": "^2.0.0",
+    "express-session": "^1.15.6",
+    "path": "^0.12.7",
+    "properties-reader": "0.0.16",
+    "simple-oauth2": "^1.6.0"
+  },
+  "bin": {
+    "analytics-cloud-apis-oauth-client-sample": "server-app.js"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/",
+      "views/**/"
+    ]
+  }
+}

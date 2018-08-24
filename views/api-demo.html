@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/api-demo.css"/>
+    <link rel="icon" type="image/x-icon" href="icon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="icon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/api-demo.js"></script>
+    <script type="text/javascript" src="rsrc/config.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body>
+
+<table>
+    <tbody>
+    <tr>
+        <td style="width: 30%">
+            <div class="container">
+                <h3>Story Configuration</h3>
+                <form role="form">
+                    <div>
+                        <label ata-toggle="tooltip">URL Parameter
+                            Type</label>
+                        <i class="fas fa-info-circle" data-placement="right"
+                           title="Additional parameters can be added to the story URL. You can add parameters that allow you to modify how a story is displayed, apply filters and provide story variables. You can also combine those parameters."></i>
+                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" id="displayBtn" name="paramType" value="Display"
+                               checked="checked">Display</label>
+                    <label class="radio-inline">
+                        <input type="radio" id="filterBtn" name="paramType" value="Filter">Filter</label>
+                    <label class="radio-inline">
+                        <input type="radio" id="variableBtn" name="paramType" value="Variable">Variable</label>
+                    <div class="form-group">
+                        <label for="story">Story ID</label>
+                        <i class="fas fa-info-circle" data-placement="right"
+                           title="The ID of the story you want to open. If not specified, you will be prompted to create a new story."></i>
+                        <input type="text" class="form-control" id="story">
+                    </div>
+                    <div class="form-group">
+                        <label for="modeParam">Opening Mode</label>
+                        <i class="fas fa-info-circle" data-placement="right" title="Indicates the mode the story will open in.
+
+'edit' opens the story in edit mode. In edit mode, you can see the main menu, toolbar, and the pagebar. If a user doesn't have edit permissions, the user will be given a read-only view of the story.
+
+'present' opens the story in presentation mode. In presentation mode the pagebar is visible, but the main menu is removed and the toolbar is hidden.
+
+'embed' opens the story in embed mode. In embed mode, you can see the pagebar with a filter button, but the main menu and toolbar are hidden."></i>
+                        <select class="form-control" id="modeParam">
+                            <option data-tokens="edit">edit</option>
+                            <option data-tokens="present">present</option>
+                            <option data-tokens="embed">embed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pageParam">Page No.</label>
+                        <i class="fas fa-info-circle" data-placement="right"
+                           title="Launches the story with the given page open. Pages may be referenced by index or by page ID."></i>
+                        <input type="text" class="form-control" id="pageParam"
+                               onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="pageBarParam">Page Bar</label>
+                        <i class="fas fa-info-circle" data-placement="right"
+                           title="Shows or disables the pagebar (default: enabled)."></i>
+                        <select class="form-control" id="pageBarParam">
+                            <option data-tokens="enabled">enable</option>
+                            <option data-tokens="disabled">disable</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modelParam">Model ID</label>
+                        <i class="fas fa-info-circle" data-placement="right" title="Identifies the model to filter. The model ID has to be specified in the following format <package_name>:<object_name>.
+
+You can find the model ID by opening a model in SAP Analytics Cloud. The package name and object name appear in the URL."></i>
+                        <input type="text" class="form-control" id="modelParam" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="dimensionParam">Dimension ID</label>
+                        <i class="fas fa-info-circle" data-placement="right" title="Identifies the dimension to apply the filter to. The technical ID of the dimension is used.
+
+You can find the dimension ID by opening a story in SAP Analytics Cloud and selecting a story filter. When you click on 'Add Story Filter', a list of available dimension appears. Please hover over the dimension, so that a tooltip appears. The dimension ID is the string preceding the name in brackets."></i>
+                        <input type="text" class="form-control" id="dimensionParam" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="variableParam">Variable ID</label>
+                        <i class="fas fa-info-circle" data-placement="right" title="Identifies the variable to apply the parameter to.
+
+You can find the variable ID by opening a story in SAP Analytics Cloud and selecting 'Edit Prompts'. A list of variables being used in the story will appear."></i>
+                        <input type="text" class="form-control" id="variableParam" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="valueParam">Value</label>
+                        <i class="fas fa-info-circle" data-placement="right" title="Identifies the values to filter a dimension for, or rather to use for the variable.
+
+May be a single value or multiple values wrapped with square brackets. Multiple values must be separated by commas and string values must be wrapped in double quotes."></i>
+                        <input type="text" class="form-control" id="valueParam" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="opParam">Operation</label>
+                        <i class="fas fa-info-circle" data-placement="right" title="Indicates which operator to use to filter with.
+
+Use 'in' if you want to include the filter values in the member selection. Use 'notIn' if you want to exclude the filter values in the member selection."></i>
+                        <select class="form-control" id="opParam" disabled>
+                            <option data-tokens="in">in</option>
+                            <option data-tokens="notIn">notIn</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-offset-2">
+                        <button type="button" class="btn btn-default" id="actionBtn" onclick="toggleBtn()"
+                                value="Generate URL">Generate&nbspURL
+                        </button>
+                        <button type="button" class="btn btn-default" id="demoBtn" onclick="demoParams()"
+                                value="Demo Parameters">Demo&nbspParameters
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </td>
+        <td>
+            <textarea id="generatedUrl" placeholder="Please specify all enabled fields to generate a valid URL." disabled></textarea>
+            <iframe alt="After generating an URL, please load your SAP Analytics Cloud story.<br><br>By clicking on 'Demo Parameters' meaningful parameters will be chosen automatically."></iframe>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<footer id="myFooter">
+    <a class="tz" target="_blank"
+       href="https://help.sap.com/doc/a4406994704e4af5a8559a640b496468/release/en-US/4818f7d4ffc241d6ac646e4974e7ba6c.html">SAP
+        Analytics Cloud URL API - Official Documentation</a>
+    <span class="close" onclick="hide()">x</span>
+</footer>
+</body>
+
+</html>

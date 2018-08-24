@@ -1,0 +1,64 @@
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+.login-title {
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+
+.account-wall {
+    margin-top: 20px;
+    padding: 40px 0 20px 0;
+    background-color: #ebeff2;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.dummy {
+    height: 80px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.impress {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
