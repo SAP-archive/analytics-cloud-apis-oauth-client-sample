@@ -1,13 +1,10 @@
-# analytics-cloud-apis-oauth-client-sample
-Sample embedding SAP Analytics Cloud (SAC) in to third party websites using the SAC API
-
-## Description
-This repository contains the accompanying source code for the [SAP Analytics Cloud APIs: Getting Started Guide](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/). We exemplify how third-party applications can access SAC content by using the authorization protocol [OAuth 2.0](https://oauth.net/2/).
+# SAP Analytics Cloud API Demo App
+This repository contains the accompanying source code for the blog post [SAP Analytics Cloud APIs: Getting Started Guide](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/) (also available as [PDF-version](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/docs/SapAnalyticsCloudApis_%20GettingStartedGuide.pdf) for download). We exemplify how third-party applications can access SAC content by using the authorization protocol [OAuth 2.0](https://oauth.net/2/).
 
 This demo app is programmed in [Node.js](https://nodejs.org/en/download/) and uses the [simple-oauth2 library](https://www.npmjs.com/package/simple-oauth2).
 ### Project Structure
 * analytics-cloud-apis-oauth-client-sample
-	* node modules
+	* docs
 	* public
 		* css
 		* img
@@ -16,17 +13,24 @@ This demo app is programmed in [Node.js](https://nodejs.org/en/download/) and us
 			* **config.js** - *configuration for the client program i.e., tenant configuration (tenant URL & ID), demo parameters (demo stories/ filters/ variables)*
 	* server-config
 		* **config.properties** - *OAuth configuration for the server program (ID of the client, secret, token & authorization URL, redirect URI)*  
+	* LICENSE
+	* NOTICE
+	* README.md
+	* package.json
 	* views - *html files*
 	* **server-app.js** - *server program (routing etc.)*
 
 ## Requirements
 1. To run the [express- app](http://expressjs.com/) locally, you need to install [Node.js](https://nodejs.org/en/download/) on your computer.
-2. Furthermore, you need to have access to an [SAP Analytics Coud](https://www.sapanalytics.cloud/) system.
+2. Furthermore, you need to have access to an [SAP Analytics Cloud](https://www.sapanalytics.cloud/) system.
 
-## Download and Configuration
-Please clone the repository:
-`git clone https://github.com/SAP/analytics-cloud-apis-oauth-client-sample.git`
+## Download
+1. Please clone the repository:
+`git clone https://github.com/SAP/analytics-cloud-apis-oauth-client-sample.git`.
+2. Download all necessary npm packages by running `npm install` from the command line in your project root folder.
 
+## Configuration
+The entire configuration is explained in our user guide ([blog post](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/)/ [PDF](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/docs/SapAnalyticsCloudApis_%20GettingStartedGuide.pdf)). Below you can find a brief summary of the configuration process. We reference the sections of the user guide.
 ### Configuration of the SAC Tenant
 1. Please make sure to have enabled iframe embedding on your tenant (cf. [2.1. Enable iFrame Embedding](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/#iframe_embedding)).
 2. Please make sure to have registered the demo app as OAuth client in SAC (cf. [1.1. Client Registration](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/#oauth2_config) and [1.2.1. Registration Details](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/#3legged_reg)).
@@ -48,12 +52,12 @@ To start using the application, it needs to be configured.
 1. As can be seen from the source code in [server-app.js](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/server-app.js), the application runs on `localhost:8080`. Please start the server (e.g., in the folder *analytics-cloud-apis-oauth-client-sample* execute the console command `npm start` or `node server-app`).
 2. Navigating to `localhost:8080` in your Google Chrome browser, opens the login page.
 3. Clicking on login sends you to the authorization server’s authorization endpoint.
-4. After entering your user credentials for the IdP, please click on authorize to get an access token. Once you have the access token, you can access protected resources on SAC.
+4. After entering your user credentials for the Identity Provider (IdP), please click on authorize to get an access token. Once you have the access token, you can access protected resources on SAC. SAC's default IdP is the [SAP Cloud Platform Identity Authentication Service](https://help.hana.ondemand.com/cloud_identity/frameset.htm?228428f9f476449cafd841a68d75b).
 5. Please enter parameter values (or, if specified, choose demo parameters by clicking on *Demo Parameters*). The tooltip next to a parameter provides an explanation for the corresponding parameter. It may also be helpful to read [2. SAC URL API](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/#url_api).
 6. After having entered parameter values, click on *Generate URL*. In the text area above of the iframe, you see the URL that has been generated.
 7. Click on *Load URL* to visualize the SAC story within the iframe.
 
-### Trouble Shooting
+### Troubleshooting
 In case the story is not visualized in the iframe (i.e., the iframe's background remains white), it is very likely that some cookies have been blocked. Make sure to have allowed cookies for the domain of your IdP. If necessary, allow additional cookies by clicking on the cookies-icon in Chrome's address bar.
 
 ## Support
