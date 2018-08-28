@@ -7,7 +7,7 @@
     "start": "node server-app.js"
   },
   "keywords": [],
-  "author": "Patrick Voelker",
+  "author": "SAC RIG",
   "dependencies": {
     "connect-timeout": "^1.9.0",
     "express": "^4.16.2",
