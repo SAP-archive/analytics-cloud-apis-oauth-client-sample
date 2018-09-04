@@ -1,5 +1,5 @@
 # SAP Analytics Cloud API Demo App
-This repository contains the accompanying source code for the blog post [SAP Analytics Cloud APIs: Getting Started Guide](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/) (also available as [PDF-version](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/docs/SapAnalyticsCloudApis_%20GettingStartedGuide.pdf) for download). We exemplify how third-party applications can access SAC content by using the authorization protocol [OAuth 2.0](https://oauth.net/2/).
+This repository contains the accompanying source code for the blog post SAP Analytics Cloud APIs: Getting Started Guide (available on [SAP Blogs](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/) or [GitHub](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/docs/sap-apis-getting-started-guide.md)). We exemplify how third-party applications can access SAC content by using the authorization protocol [OAuth 2.0](https://oauth.net/2/).
 
 This demo app is programmed in [Node.js](https://nodejs.org/en/download/) and uses the [simple-oauth2 library](https://www.npmjs.com/package/simple-oauth2).
 ### Project Structure
@@ -30,7 +30,7 @@ This demo app is programmed in [Node.js](https://nodejs.org/en/download/) and us
 2. Download all necessary npm packages by running `npm install` from the command line in your project root folder.
 
 ## Configuration
-The entire configuration is explained in our user guide ([blog post](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/)/ [PDF](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/docs/SapAnalyticsCloudApis_%20GettingStartedGuide.pdf)). Below you can find a brief summary of the configuration process. We reference the sections of the user guide.
+The entire configuration is explained in our user guide ([SAP Blogs](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/)/ [GitHub](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/docs/sap-apis-getting-started-guide.md)). Below you can find a brief summary of the configuration process. We reference the sections of the user guide.
 ### Configuration of the SAC Tenant
 1. Please make sure to have enabled iframe embedding on your tenant (cf. [2.1. Enable iFrame Embedding](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/#iframe_embedding)).
 2. Please make sure to have registered the demo app as OAuth client in SAC (cf. [1.1. Client Registration](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/#oauth2_config) and [1.2.1. Registration Details](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/#3legged_reg)).
