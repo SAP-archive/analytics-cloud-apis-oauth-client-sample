@@ -189,7 +189,7 @@ We can list the IDs of all variables within a story by opening a story in SAC an
 Using SAC REST API endpoints, any requesting authorized application can access data stored on the tenant. ([official documentation](https://help.sap.com/doc/14cac91febef464dbb1efce20e3f1613/release/en-US/index.html))
 
 Below you can find an overview over the endpoints that are currently accessible to third-party applications.
-![enter image description here](https://raw.githubusercontent.com/SAP/analytics-cloud-apis-oauth-client-sample/master/docs/img/17.PNG)
+![](https://raw.githubusercontent.com/SAP/analytics-cloud-apis-oauth-client-sample/master/docs/img/17.png)
 
 To access an endpoint, we simply append it to the tenant’s base URL (cf. screenshot below).
 
