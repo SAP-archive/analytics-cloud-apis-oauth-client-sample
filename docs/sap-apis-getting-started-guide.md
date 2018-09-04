@@ -10,19 +10,7 @@ This blog post is intended as a user guide for the URL API and the REST API of S
 This blog post is structured as follows:
 
 1. User Authorization through OAuth 2.0 in SAC
-		1.1. Client Registration
-		1.2. Authorization Code Grant (three-legged)
-		1.2.1. Registration Details
-		1.2.2. Obtaining the Access Token
-		1.3. Client Credentials Grant (two-legged)
-		1.3.1. Registration Details
-		1.3.2. SAML Bearer Assertion
 2. SAC URL API
-	2.1. Enable iFrame Embedding
-	2.2. Compose the URL
-	2.2.1. Display Parameters
-	2.2.2. Filter Parameters
-	2.2.3. Variable Parameters
 3. SAC REST API
 
 1\. User Authorization through OAuth 2.0 in SAC
@@ -75,7 +63,7 @@ Specifying a **secret** is an additional security measure and optional **(2)**. 
 
 Under **Redirect URI** we indicate the callback URL the authorization server returns the client to after successful authorization **(3)**.
 
-The client is able to parse the authorization code from the callback URL’s query string (e.g. http://localhost:8080/callback?**code**\=1234abcd-5678-e9fg-h123i-4567jkl8mnop).
+The client is able to parse the authorization code from the callback URL’s query string (e.g. http://localhost:8080/callback?code=1234abcd-5678-e9fg-h123i-4567jkl8mnop).
 
 Defining a **lifetime** for access and refresh tokens is again optional **(4)**.
 
@@ -139,7 +127,7 @@ Furthermore, we have to allow cookies from *sapbusinessobjects.cloud* in Google 
 
 Now that we have enabled iframe embedding on our tenant, we compose the [URL of the story](https://help.sap.com/doc/a4406994704e4af5a8559a640b496468/release/en-US/f0827b68d24548448060c526a8764d78.html) to be embedded in the iframe. A story is referenced like this:
 
-*       https://`<TENANT>`/sap/fpa/ui/tenants/`<TENANT_ID>`/bo/story/`<STORY_ID>`
+*       https://<TENANT>/sap/fpa/ui/tenants/<TENANT_ID>/bo/story/<STORY_ID>
     
 
 `<TENANT>` is a placeholder for our tenant’s public URL. The `<TENANT_ID>` refers to the ID that has been assigned to our tenant. The `<STORY_ID>` indicates which story we want to open. The values to replace these placeholders can be found in the URL that opens when selecting a story in SAC (**≡** \-> **Browse** \-> **Stories** \-> e.g., _MyFavouriteStory_):![](https://raw.githubusercontent.com/SAP/analytics-cloud-apis-oauth-client-sample/master/docs/img/11.png)
