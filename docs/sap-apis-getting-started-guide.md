@@ -1,11 +1,11 @@
 # SAP Analytics Cloud APIs: Getting Started Guide
-Application Programming Interfaces (APIs) allow developers to access predefined services and at the same time hide these services’ implementation complexity. In recent years, APIs have gained popularity as more and more companies have decided to expose their data and functionalities. On the one hand, making data/ functionality accessible to partners and customers is a key driver for the development of innovative solutions. On the other hand, it allows one application to access another applications’ services which is indispensable for connecting enterprise applications.
+Application Programming Interfaces (APIs) allow developers to access predefined services and at the same time hide these services’ implementation complexity. In recent years, APIs have gained popularity as more and more companies have decided to expose their data and functionalities. On the one hand, making data/ functionality accessible to partners and customers is a key driver for the development of innovative solutions. On the other hand, it allows one application to access another applications’ services which is i/ndispensable for connecting enterprise applications.
 
 Last year, SAP Analytics Cloud (SAC) has started opening up access to its data by publishing the REST API. Last month, the URL API followed. Both, URL and REST API, have been published on [API Hub](https://api.sap.com/shell/discover/contentpackage/SAPAnalyticsCloud?section=OVERVIEW). The REST API conforms to the [OpenAPI specification](https://swagger.io/specification/).
 
 This blog post is intended as a user guide for the URL API and the REST API of SAC. Before diving into the APIs themselves, we deal with how OAuth 2.0 can be implemented to let third-party applications access our protected resources on SAC. Once, a third-party application is authorized, it can make an API call to SAC.
 
-![](https://raw.githubusercontent.com/SAP/analytics-cloud-apis-oauth-client-sample/master/docs/img/00.png)
+![API Demo Image](img/00.png)
 
 This blog post is structured as follows:
 
