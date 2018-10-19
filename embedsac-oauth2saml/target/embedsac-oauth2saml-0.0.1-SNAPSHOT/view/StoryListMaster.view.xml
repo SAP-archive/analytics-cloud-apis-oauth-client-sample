@@ -1,0 +1,33 @@
+<mvc:View controllerName="sap.ui.demo.embeddedanalytics.controller.StoryListMaster"
+	xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic"
+	xmlns:f="sap.f">
+
+<!-- 	<semantic:SemanticPage id="page"> -->
+<!-- 		<semantic:titleHeading> -->
+<!-- 			<Title id="masterHeaderTitle" text="Stories"  /> -->
+<!-- 		</semantic:titleHeading> -->
+<!-- 		<semantic:content> -->
+			<!-- For client side filtering add this to the items attribute: parameters: 
+				{operationMode: 'Client'}}" -->
+			<List id="list" 
+				width="auto" 
+				class="sapFDynamicPageAlignContent"
+				items="{/}" 
+				growing="true" 
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished" 
+				selectionChange="onSelectionChange">
+				<items>
+					<ObjectListItem title="{name}" type="Navigation"
+						press="handlePress">
+						<attributes>
+							<ObjectAttribute text="{created}" />
+						</attributes>
+					</ObjectListItem>
+
+				</items>
+			</List>
+<!-- 		</semantic:content> -->
+<!-- 	</semantic:SemanticPage> -->
+
+</mvc:View>

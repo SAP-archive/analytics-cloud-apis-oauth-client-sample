@@ -1,0 +1,14 @@
+<mvc:View
+    controllerName="sap.ui.demo.embeddedanalytics.controller.Detail"
+	xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc">
+<!-- 	<Page -->
+<!-- 		title="{i18n>detailPageTitle}" -->
+<!-- 		showNavButton="true" -->
+<!-- 		navButtonPress="onNavBack"> -->
+<!-- 		<content> -->
+			<html:iframe target='_top' src="" id ="attachmentframe" height="100%" width="100%"></html:iframe>
+<!-- 		</content>	 -->
+<!-- 	</Page> -->
+</mvc:View>

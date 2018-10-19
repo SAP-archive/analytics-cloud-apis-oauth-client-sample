@@ -1,0 +1,39 @@
+<mvc:View
+	controllerName="sap.ui.demo.embeddedanalytics.controller.App"
+	xmlns="sap.uxap"
+	xmlns:layout="sap.ui.layout"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<m:Page title="{i18n>homePageTitle}">
+		<m:headerContent>
+			<m:Button
+				icon="sap-icon://hello-world"
+				press="onOpenDialog"/>
+		</m:headerContent>
+		<m:content>
+<!-- 			<mvc:XMLView viewName="sap.ui.demo.embeddedanalytics.view.HelloPanel"/> -->
+<!-- 			<mvc:XMLView viewName="sap.ui.demo.embeddedanalytics.view.StoryList"/> -->
+			<ObjectPageLayout id="ObjectPageLayout">
+				<headerTitle>
+					<ObjectPageHeader objectTitle="Sample Application">
+					</ObjectPageHeader>
+			    </headerTitle>
+					<sections>
+						<ObjectPageSection id="analysisSection" title="Analysis">
+							<subSections>
+								<ObjectPageSubSection id="goalsSectionSS1" title=" ">
+									<blocks>
+										<m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="My Stories" press="handlePress">
+											<m:TileContent>
+												<m:ImageContent src="sap-icon://area-chart" />
+											</m:TileContent>
+										</m:GenericTile>
+									</blocks>
+								</ObjectPageSubSection>
+							</subSections>
+						</ObjectPageSection>
+					</sections>
+			</ObjectPageLayout>		
+		</m:content>
+	</m:Page>
+</mvc:View>
