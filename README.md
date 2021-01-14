@@ -1,3 +1,8 @@
+![](https://img.shields.io/badge/STATUS-NOT%20CURRENTLY%20MAINTAINED-red.svg?longCache=true&style=flat)
+
+# Important Notice
+This public repository is read-only and no longer maintained.
+
 # SAP Analytics Cloud API Demo App
 This repository contains the accompanying source code for the blog post SAP Analytics Cloud APIs: Getting Started Guide (available on [SAP Blogs](https://blogs.sap.com/2018/04/20/sap-analytics-cloud-apis-getting-started-guide/) or [GitHub](https://github.com/SAP/analytics-cloud-apis-oauth-client-sample/blob/master/docs/sap-apis-getting-started-guide.md)). We exemplify how third-party applications can access SAC content by using the authorization protocol [OAuth 2.0](https://oauth.net/2/).
 
